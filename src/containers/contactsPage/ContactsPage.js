@@ -21,7 +21,8 @@ export const ContactsPage = ({contacts, addContact}) => {
   useEffect(() => {
     const nameIsDuplicate = () => {
       const contained = contacts.find((contact) => contact.name === name);
-      return contained? false : true ;
+      return contained? true : false ;
+      
     }
     setDuplicate(nameIsDuplicate());
   },[name, duplicate, contacts])
